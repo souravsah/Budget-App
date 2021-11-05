@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 
-const ExpenseListItem = () => {
+const ExpenseListItem = ({idx,item}) => {
   return (
-    <li className="expense-item">
+    <li className="expense-item" key={idx}>
       <span>
-        <h5>Iphone 13 pro max</h5>
-        <h6>November 12th 2021</h6>
+        <h5>{item.Utilities}</h5>
+        <h6>{item.date}</h6>
       </span>
 
-      <strong>$2000.00</strong>
+      <strong>$ {item.amount}</strong>
     </li>
   );
 };

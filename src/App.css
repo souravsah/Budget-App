@@ -3,9 +3,16 @@
   margin: auto;
   padding: 50px;
 }
+.addexpensedetails{
+background-color:#756767 !important ;
+}
+.dark-mode{
+  background-color: #333 !important;
+  color: #cecece !important;
+}
 
 .navbar {
-  height: 10vh;
+  height: 12vh;
   background-color: #364051;
   color: white;
 }
@@ -31,7 +38,8 @@
 /* Expense Details */
 .expensedetails {
   height: 250px;
-  background-color: #f7f7f7;
+  /* color: black; */
+  /* background-color: #f7f7f7; */
 }
 
 .expense-content h1 {
@@ -47,7 +55,9 @@
   font-size: 18px;
   color: white;
 }
-
+.expense-content .add-expense-btn:hover {
+  cursor: pointer;
+}
 /* Filter form */
 .filter-content {
   display: flex;
@@ -92,7 +102,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 24px;
-  color: #313131;
+  /* color: #313131; */
   margin: 18px 0;
   border: 1px solid #ddd;
   padding: 15px;
@@ -104,4 +114,35 @@
 
 .expense-item h6 {
   font: 8px;
+}
+/* form */
+form{
+  width: 60%;
+  padding: 30px;
+}
+form .form-box{
+  margin: 10px 0;
+}
+form .form-box input{
+  outline: none;
+  width: 100%;
+  padding: 8px 3px;
+
+}
+form  button{
+  margin: none;
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: rgb(31, 95, 124);
+}
+.heading{
+  height: 85px;
+  /* background-color: #ccc; */
+}
+.heading h2{
+  margin-left: 30pxs;
 }

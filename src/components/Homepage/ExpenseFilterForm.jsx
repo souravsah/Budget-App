@@ -8,10 +8,10 @@ const ExpenseFilterForm = () => {
           type="text"
           placeholder="Search Expenses"
           name="searchInput"
-          autocomplete="off"
+          autoComplete="off"
         />
         <select name="filterDropdown" className="filter-dropdown">
-          <option value="1" selected>
+          <option value="1" >
             Date
           </option>
           <option value="2">Amount</option>
