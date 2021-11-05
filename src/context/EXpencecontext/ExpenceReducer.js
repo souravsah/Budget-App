@@ -5,6 +5,11 @@ export default (state, action) => {
           ...state,
           expence: [...state.expence, action.payload],
         };
+        case "ADD_NAME":
+          return {
+            ...state,
+            newname:action.payload,
+          }
       default:
         return state;
     }

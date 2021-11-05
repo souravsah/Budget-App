@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Navbar from "./core/Navbar";
 import { GlobalProvider } from "./context/EXpencecontext/Expencecontext";
 import SettingsPage from "./Pages/SettingsPage/SettingsPage";
+import SettingPageappearance from "./Pages/SettingsPage/SettingPageappearance";
 function App() {
   return (
     <GlobalProvider>
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/" component={HomePage}/>
         <Route path="/expence" component={AddExpense}/>
         <Route path="/settings" component={SettingsPage}/>
+        <Route path="/theme" component={SettingPageappearance}/>
       </Switch>
     </Router>
 

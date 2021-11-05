@@ -7,13 +7,13 @@
 background-color:#756767 !important ;
 }
 .dark-mode{
-  background-color: #333 !important;
+  background-color: #0D1117 !important;
   color: #cecece !important;
 }
 
 .navbar {
   height: 12vh;
-  background-color: #364051;
+  background-color: #161B22;
   color: white;
 }
 
@@ -38,6 +38,9 @@ background-color:#756767 !important ;
 /* Expense Details */
 .expensedetails {
   height: 250px;
+  margin: 0 10px;
+  border-bottom: 1px solid #ccc;
+
   /* color: black; */
   /* background-color: #f7f7f7; */
 }
@@ -53,6 +56,7 @@ background-color:#756767 !important ;
   outline: none;
   background-color: #1c88bf;
   font-size: 18px;
+  border: 1px solid #ccc;
   color: white;
 }
 .expense-content .add-expense-btn:hover {
@@ -62,6 +66,9 @@ background-color:#756767 !important ;
 .filter-content {
   display: flex;
   justify-content: space-between;
+}
+input{
+  border: 1px solid #ccc;
 }
 
 .filter-content input {
@@ -142,7 +149,46 @@ form  button{
 .heading{
   height: 85px;
   /* background-color: #ccc; */
+  border-bottom: 1px solid #ccc;
+  margin: 0 10px;
 }
 .heading h2{
   margin-left: 30pxs;
+}
+li{
+  list-style: none;
+}
+.setting1{
+  display: flex;
+  justify-content: space-between;
+}
+.setting-left{
+  padding: 10px 0;
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.setting-left .profile{
+  border: 1px solid #ccc ;
+}
+.setting-left li:hover{
+  background-color: rgb(66, 63, 63);
+  cursor: pointer;
+}
+
+.setting-left li{
+  padding: 5px;
+  /* border-bottom: 1px solid #ccc; */
+}
+.formprofile{
+  width: 500px;
+}
+.formprofile input{
+  outline: none;
+  border: none;
+  padding: 0 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 5px 0;
 }
