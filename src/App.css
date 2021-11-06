@@ -192,3 +192,30 @@ li{
   width: 100%;
   padding: 5px 0;
 }
+.theme{
+  width: 250px;
+}
+.theme ul li{
+  width: 100%;
+  padding: 6px 4px;
+  margin: 5px;
+  background-color: rgb(143, 137, 137);
+}
+.theme ul li:hover{
+background-color: #ccc;
+cursor: pointer;
+}
+.theme1{
+  /* background-color: #363c44 !important; */
+  color: #f3acac !important;
+}
+.theme2{
+  color: #691e1e !important;
+
+}
+.theme3{
+  color: #1c88bf !important;
+}
+.theme4{
+  color: #0c58bb !important;
+}
