@@ -3,7 +3,7 @@ import React from 'react'
 const Theme = () => {
     const handleTheme1 = () =>{
         let element=document.body;
-        element.classList.toggle("theme1")
+        element.classList.add("theme1")
         if(element.classList.contains("theme2") 
         ){
             element.classList.remove("theme2")
@@ -18,7 +18,7 @@ const Theme = () => {
     }
     const handleTheme2 = ()=>{
         let element=document.body;
-        element.classList.toggle("theme2")
+        element.classList.add("theme2")
         if(element.classList.contains("theme1")){
             element.classList.remove("theme1")
         }
@@ -33,7 +33,7 @@ const Theme = () => {
     }
     const handleTheme3 = () =>{
         let element=document.body;
-        element.classList.toggle("theme3")
+        element.classList.add("theme3")
         if(element.classList.contains("theme1")){
             element.classList.remove("theme1")
         }
@@ -48,7 +48,7 @@ const Theme = () => {
     }
     const handleTheme4 = () =>{
         let element=document.body;
-        element.classList.toggle("theme4")
+        element.classList.add("theme4")
         if(element.classList.contains("theme1")){
             element.classList.remove("theme1")
         }
