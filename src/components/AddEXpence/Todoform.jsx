@@ -1,17 +1,24 @@
 import React, { Fragment,useContext,useState } from 'react'
 import { useHistory } from 'react-router';
+import { v4 as uuidv4 } from 'uuid';
+import DatePicker from "react-datepicker";
 import { GlobalContext } from '../../context/EXpencecontext/Expencecontext'
+import moment from "moment";
+import "react-datepicker/dist/react-datepicker.css";
 const Todoform = () => {
     const history = useHistory()
+    let [startDate, setStartDate] = useState(new Date());
+
     let {addExpence} = useContext(GlobalContext);
     let [data,setData]=useState({
         Utilities:"",
         amount:"",
-        date:"",
+        date:moment(startDate).format("MMM Do YY"),
         textarea:"",
+        id:"",
     })
     const handleChange = (e) =>{
-        setData({...data,[e.target.name]:e.target.value})
+        setData({...data,[e.target.name]:e.target.value,["id"]:uuidv4()})
     }
     const clearData = () =>{
         setData({
@@ -19,7 +26,7 @@ const Todoform = () => {
             amount:"",
             date:"",
             textarea:"",
-    
+            id:"",
         })
     }
     const handleSubmit = (e) =>{
@@ -47,8 +54,7 @@ const Todoform = () => {
             <input type="number" placeholder="Amount" name="amount" value={data.amount} onChange={handleChange} autoComplete="off"/>
         </div>
         <div className="form-box">
-            <input type="date" placeholder="Amount" name="date" value={data.date} onChange={handleChange} autoComplete="off" />
-        </div>
+        <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />        </div>
 
             <div className="form-box">
                 <textarea name="" id="" cols="83" rows="8" placeholder="Add a note for your expence" name="textarea" value={data.textarea} onChange={handleChange} ></textarea>

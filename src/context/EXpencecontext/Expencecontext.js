@@ -3,6 +3,8 @@ import ExpenceReducer from "./ExpenceReducer";
 const initialState = {
   expence: [],
   newname:"Budget App",
+  filterData:[],
+  id:"",
 };
 // Created Context
 export const GlobalContext = createContext(initialState);
@@ -23,6 +25,24 @@ export const GlobalProvider = ({ children }) => {
       payload: Name,
     });
   };
+  const filterdata = (data) => {
+    dispatch({
+      type: "FILTER_DATA", //mandatory
+      payload: data,
+    });
+  };
+  const deleteExpence = (id) => {
+    dispatch({
+      type: "DELETE_EXPENCE", //mandatory
+      payload: id,
+    });
+  };
+  const handleDeleteFilter = (id) =>{
+    dispatch({
+      type:"DELETE_DATAA",
+      payload: id,
+    });
+  };
 
 
   return (
@@ -30,8 +50,12 @@ export const GlobalProvider = ({ children }) => {
       value={{
         expence: state.expence,
         newname:state.newname,
+        filterData:state.filterData,
+        filterdata,
         newName,
         addExpence,
+        deleteExpence,
+        handleDeleteFilter,
       }
       }
     >
