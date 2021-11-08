@@ -13,12 +13,12 @@ const Todoform = () => {
     let [data,setData]=useState({
         Utilities:"",
         amount:"",
-        date:moment(startDate).format("MMM Do YY"),
+        date:"",
         textarea:"",
         id:"",
     })
     const handleChange = (e) =>{
-        setData({...data,[e.target.name]:e.target.value,["id"]:uuidv4()})
+        setData({...data,[e.target.name]:e.target.value,["id"]:uuidv4(),["date"]:moment(startDate).format("MMM Do YY")})
     }
     const clearData = () =>{
         setData({

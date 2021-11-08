@@ -21,8 +21,8 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="container navbar-wrapper">
-        <h1 onClick={handleBudget}>{newname}</h1>
-        <h3 ><span onClick={handledarkmode}>{toggle?<BsFillMoonFill/>:<BsFillSunFill/>}</span>{"   "}<span onClick={handleSettings}><FiSettings/></span></h3>
+        <h1 onClick={handleBudget}>{newname || "Budget App"}</h1>
+        <h3><span onClick={handledarkmode}>{toggle?<BsFillMoonFill/>:<BsFillSunFill/>}</span>{"   "}<span onClick={handleSettings}><FiSettings/></span></h3>
       </div>
     </div>
   );

@@ -7,23 +7,27 @@ import moment from "moment";
 
 const ExpenseFilterForm = () => {
   let [startDate, setStartDate] = useState(new Date());
-  let [toggle,settoggle]=useState(0);
+  let [datetoggle,setSettoggle]=useState(true);
+  let [toggle,settoggle]=useState(false);
   let history = useHistory();
   let [filter,setfilter]=useState({
-      date:moment(startDate).format("MMM Do YY"),
+      // date:"",
   });
   let {filterdata}=useContext(GlobalContext);
   const handleSubmit = (e) =>{
     e.preventDefault();
-    filterdata(filter)
-    filter={
-      date:moment(startDate).format("MMM Do YY"),
-
-    }    
+    filterdata({...filter})
+    console.log(filter)
     history.push("/search")
   }
   const handleChange=(e)=>{
-    setfilter({...filter,[e.target.name]:e.target.value})
+    if(toggle===false)
+    {
+      setfilter({...filter,[e.target.name]:e.target.value})
+
+    }else{
+      setfilter({...filter,[e.target.name]:e.target.value,["date"]:moment(startDate).format("MMM Do YY")})
+    }
   }
   console.log(filter)
   const handleToggle = (e) =>{
@@ -52,7 +56,7 @@ const ExpenseFilterForm = () => {
           <option value="2" >Amount</option>
         </select>
         <h1> {
-          toggle?<input type="number" name="amount" id="" onChange={handleChange} />:    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+          toggle?<input type="number" name="amount" id="" onChange={handleChange} />:<DatePicker selected={startDate} onChange={(date) => setStartDate(date)}  disabled	={toggle}	/> 
         }   
       </h1>
       <button type="submit">Submit</button>
