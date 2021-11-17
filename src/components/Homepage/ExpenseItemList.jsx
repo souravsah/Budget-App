@@ -3,11 +3,12 @@ import ExpenseListItem from "./ExpenseListItem";
 import { GlobalContext } from "../../context/EXpencecontext/Expencecontext";
 
 const ExpenseItemList = () => {
-  let {expence}=useContext(GlobalContext);
+  let {expence,theme}=useContext(GlobalContext);
+
   return (
 
     <Fragment>
-      <div className="container">
+      <div className="container" style={theme.ExpenseItemList}>
         <ul className="ExpenseItemList">
         {!expence.length ? (
         <h1>Sorry, No expence</h1>

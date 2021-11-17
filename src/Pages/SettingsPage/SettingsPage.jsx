@@ -4,7 +4,7 @@ import Appearance from '../../core/Appearance'
 const SettingsPage = () => {
     return (
         <div>
-        <div className="container setting1">
+        <div className="container setting2">
         <Appearance/>
         <Profile/>
         </div>

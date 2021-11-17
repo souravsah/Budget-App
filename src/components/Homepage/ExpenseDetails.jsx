@@ -4,15 +4,17 @@ import { GlobalContext } from "../../context/EXpencecontext/Expencecontext";
 
 
 const ExpenseDetails = () => {
-  let {expence,toggle}=useContext(GlobalContext);
+  let {expence,toggle,theme}=useContext(GlobalContext);
   let history=useHistory();
   const handleClick = () =>{
     history.push('/expence')
   }
   return (
     <Fragment>
-      <div className={`expensedetails` }>
-        <div className={`container expense-content `}>
+      <div className={`expensedetails` } style={
+        theme.Expensefilterform
+      }>
+        <div className={`container1 expense-content `}>
           <h1>Viewing {expence.length} expenses totalling $ {expence.reduce((acc,curr)=>{
             return acc +=Number(curr.amount);
           },0)}</h1>

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { GlobalContext } from '../../context/EXpencecontext/Expencecontext'
 const Profile = () => {
-    let {newName,newname}=useContext(GlobalContext);
+    let {newName,newname,theme}=useContext(GlobalContext);
     let [name,setname]=useState("");
     const handleChange = (e) =>{
             setname(e.target.value)
@@ -11,7 +11,11 @@ const Profile = () => {
         newName(name)
     }
     return (
-        <form className="formprofile" onSubmit={handleSubmit}>
+        <form className="formprofile" onSubmit={handleSubmit}
+        style={
+            theme.Profile
+        }
+        >
             <label htmlFor="">Change App Name</label><br/><br/>
             <input type="text" value={name || newname}  onChange={handleChange}/><br/><br/>
             <button type="submit">Change</button>

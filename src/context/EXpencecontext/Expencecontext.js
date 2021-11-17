@@ -5,6 +5,47 @@ const initialState = {
   newname:"Budget App",
   filterData:[],
   id:"",
+  theme:{
+    Todoform:{
+      backgroundColor:"#ccc"
+    },
+    ExpenseFilterform:{
+      backgroundColor:"#ccc"
+    },
+    Profile:{
+      backgroundColor:"#ccc",
+      color:"black"
+    },
+    Navbar:{
+      color:"white"
+    },
+    main:{
+      backgroundColor:"white"
+    },
+    Expensefilterform:{
+      color:"black"
+  },
+  ExpenseItemList:{
+    color:"black"
+  },
+  themebox:{
+    color:"black"
+  },
+  Appearance:{
+    color:"black"
+  }
+
+
+  },
+  Edit:{
+
+    Utilities:"",
+amount:"",
+date:"",
+textarea:"",
+id:"",
+edit:false
+  }
 };
 // Created Context
 export const GlobalContext = createContext(initialState);
@@ -43,19 +84,34 @@ export const GlobalProvider = ({ children }) => {
       payload: id,
     });
   };
-
+const initialTheme= (text) =>{
+  dispatch({
+    type:"INITIAL_THEME",
+    payload:text,
+  });
+};
+const editTodo = (data) =>{
+  dispatch({
+    type:"EDIT_DATA",
+    payload:data,
+  });
+};
 
   return (
     <GlobalContext.Provider
       value={{
+        theme:state.theme,
         expence: state.expence,
         newname:state.newname,
         filterData:state.filterData,
+        Edit:state.Edit,
         filterdata,
         newName,
         addExpence,
         deleteExpence,
         handleDeleteFilter,
+        initialTheme,
+        editTodo
       }
       }
     >

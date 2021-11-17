@@ -3,18 +3,33 @@
   margin: auto;
   padding: 50px;
 }
-.addexpensedetails{
+/* .addexpensedetails{
 background-color:#756767 !important ;
 }
 .dark-mode{
-  background-color: #0D1117 !important;
+  background-color: #363c44 !important;
   color: #cecece !important;
-}
+} */
+.ExpenseWrapper{
+  padding: 30px;
+  width: 1000px;
+  margin: auto;
 
+}
+.main{
+  /* width: 100vh; */
+  min-height:100vh;
+}
+.delete{
+  color: red;
+}
+.edit{
+  color: green;
+}
 .navbar {
   height: 80px;
   background-color: #161B22;
-  color: white;
+  /* color: white; */
 }
 
 .navbar .navbar-wrapper {
@@ -40,14 +55,20 @@ background-color:#756767 !important ;
   height: 250px;
   margin: 0 10px;
   border-bottom: 1px solid #ccc;
-
-  /* color: black; */
-  /* background-color: #f7f7f7; */
 }
-
+.expense-content{
+  padding-left: 20px;
+}
 .expense-content h1 {
   margin-bottom: 30px;
   font-weight: 500;
+}
+.container1{
+  width: 780px;
+  margin: auto;
+  height: 100%;
+  padding-left: 40px;
+  padding-top: 20px;
 }
 
 .expense-content .add-expense-btn {
@@ -89,6 +110,10 @@ input{
   padding: 0 10px;
   font-size: 18px;
 }
+.container2{
+  width: 750px;
+  margin: auto;
+}
 
 .expense-wrapper-heading {
   display: flex;
@@ -126,9 +151,15 @@ input{
 form{
   width: 60%;
   padding: 30px;
+  /* background-color: #ccc; */
 }
 form .form-box{
   margin: 10px 0;
+}
+form textarea{
+  padding: 5px 5px;
+  outline: none;
+  border: none;
 }
 form .form-box input{
   outline: none;
@@ -136,10 +167,33 @@ form .form-box input{
   padding: 8px 3px;
 
 }
+.ExpenseFilterForm{
+  margin-top: 15px;
+
+
+}
+.ExpenseFilterForm form input{
+  outline: none;
+  border: none;
+  border-radius: 0;
+}
+.ExpenseFilterForm form select{
+  outline: none;
+  border: none;
+  /* background-color: white; */
+}
+.ExpenseFilterForm form select option{
+  outline: none;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+}
+
 form  button{
   margin: none;
   border: none;
   outline: none;
+  width: 100%;
   padding: 10px 12px;
   color: white;
   cursor: pointer;
@@ -150,26 +204,32 @@ form  button{
   height: 85px;
   /* background-color: #ccc; */
   border-bottom: 1px solid #ccc;
-  margin: 0 10px;
+  margin: 10px 0;
 }
 .heading h2{
-  margin-left: 30pxs;
+  margin-left: 30px;
+}
+.header{
+  width: 750px;
+  height: 100%;
+  margin: auto;
+  padding: 20px 0;
 }
 li{
   list-style: none;
 }
 .setting1{
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .setting-left{
   padding: 10px 0;
   width: 200px;
-  height: 100px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
+  height: 124px;
+  /* border-radius: 10px; */
+  /* border: 1px solid #ccc; */
 }
-.setting-left .profile{
+.setting-left li{
   border: 1px solid #ccc ;
 }
 .setting-left li:hover{
@@ -183,6 +243,7 @@ li{
 }
 .formprofile{
   width: 500px;
+  color: black !important;
 }
 .formprofile input{
   outline: none;
@@ -199,7 +260,7 @@ li{
   width: 100%;
   padding: 6px 4px;
   margin: 5px;
-  background-color: rgb(143, 137, 137);
+  /* background-color: rgb(143, 137, 137); */
     border: 1px solid #ccc;
 
 }
@@ -208,7 +269,6 @@ background-color: #ccc;
 cursor: pointer;
 }
 .theme1{
-  /* background-color: #363c44 !important; */
   color: #f3acac !important;
 }
 .theme2{
@@ -220,4 +280,11 @@ cursor: pointer;
 }
 .theme4{
   color: #0c58bb !important;
+}
+.setting2{
+  display: flex;
+  justify-content: space-between;
+}
+.border{
+  border-left: 3px solid red !important;
 }

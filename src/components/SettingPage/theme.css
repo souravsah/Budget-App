@@ -1,0 +1,69 @@
+.theme{
+    display: grid;
+    grid:"THeme1 THeme2 THeme3"
+         "THeme4 THeme5 THeme6";
+    grid-gap: 20px;
+    width: 300px;
+    margin-left: 30px;
+}
+.theme div img{
+width: 100%;
+height: 80%;
+}
+.theme span{
+    cursor: pointer;
+}
+
+.THeme1{
+grid-area: THeme1;
+width: 250px;
+height:160px;
+border: 1px solid blue;
+border-radius: 5px;
+
+}
+.THeme1 div,.THeme2 div,.THeme3 div,.THeme4 div,.THeme5 div,.THeme6 div{
+    display: flex;
+}
+
+.THeme2{
+    grid-area: THeme2;
+    border-radius: 5px;
+
+    width: 250px;
+    height:160px;
+    border: 1px solid blue;
+
+}
+.THeme3{
+    grid-area: THeme3;
+    width: 250px;
+    height:160px;
+    border: 1px solid blue;
+    border-radius: 5px;
+
+}
+.THeme4{
+    grid-area: THeme4;
+    width: 250px;
+    height:160px;
+    border: 1px solid blue;
+    border-radius: 5px;
+
+}
+.THeme5{
+    grid-area: THeme5;
+    width: 250px;
+    height:160px;
+    border: 1px solid blue;
+    border-radius: 5px;
+
+}
+.THeme6{
+    grid-area: THeme6;
+    width: 250px;
+    height:160px;
+    border: 1px solid blue;
+    border-radius: 5px;
+
+}

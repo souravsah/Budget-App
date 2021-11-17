@@ -4,7 +4,7 @@ import ExpenseItemList from "./ExpenseItemList";
 const ExpenseWrapper = () => {
   return (
     <div className="ExpenseWrapper">
-      <div className="container expense-wrapper-heading">
+      <div className="container2 expense-wrapper-heading">
         <h3>Expense</h3>
         <h3>Amount</h3>
       </div>
